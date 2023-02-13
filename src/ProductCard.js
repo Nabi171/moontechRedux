@@ -3,7 +3,7 @@ import { BiListPlus } from "react-icons/bi";
 import { MdDeleteForever } from "react-icons/md";
 import { useDispatch } from 'react-redux';
 import { ADD_TO_CART } from './redux/actionTypes/actionTypes';
-import { addToCart } from './redux/actionCreators/productAction';
+import { addToCart, removeFromCart } from './redux/actionCreators/productAction';
 const ProductCard = ({ product }) => {
 
     const dispatch = useDispatch();
@@ -51,7 +51,7 @@ const ProductCard = ({ product }) => {
 
                 <button
                     title='Remove'
-
+                    onClick={() => dispatch(removeFromCart(product))}
                     className='flex justify-between px-3 bg-red-500 text-white p-1 rounded-full flex-1'
                 >
                     <p>Remove</p>

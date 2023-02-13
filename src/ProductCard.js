@@ -2,7 +2,6 @@ import React from 'react';
 import { BiListPlus } from "react-icons/bi";
 import { MdDeleteForever } from "react-icons/md";
 import { useDispatch } from 'react-redux';
-import { ADD_TO_CART } from './redux/actionTypes/actionTypes';
 import { addToCart, removeFromCart } from './redux/actionCreators/productAction';
 const ProductCard = ({ product }) => {
 
